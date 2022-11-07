@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    // Bullet hole texture
-    public GameObject bulletHole;
-
+    [SerializeField] private GameObject bulletHole;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private AudioClip shotSound;
     [SerializeField] private ParticleSystem shotParticles;
@@ -26,7 +24,7 @@ public class PlayerShoot : MonoBehaviour
             // Shoot the bullet
             Shoot();
 
-            // Wait for .5 second
+            // Wait for the cooldown
             yield return new WaitForSeconds(1f / 6.75f);
         }
     }

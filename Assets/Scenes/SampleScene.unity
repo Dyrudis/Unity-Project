@@ -3932,6 +3932,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1703977141}
+  - {fileID: 1582554402}
   m_Father: {fileID: 1935369197}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6530,7 +6531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582554402}
   m_Layer: 0
-  m_Name: Bullet Spawn
+  m_Name: Grenade Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6544,12 +6545,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582554401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.575, y: 0.071, z: -0}
+  m_LocalPosition: {x: 0.327, y: -0.09720135, z: 0.964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1703977141}
-  m_RootOrder: 6
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647817960
 GameObject:
@@ -7557,7 +7558,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1703977141}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1822022451
 ParticleSystemRenderer:
@@ -12886,6 +12887,7 @@ GameObject:
   - component: {fileID: 1935369199}
   - component: {fileID: 1935369195}
   - component: {fileID: 1935369198}
+  - component: {fileID: 1935369200}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Player
@@ -12978,6 +12980,24 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935369194}
   m_Enabled: 1
+--- !u!114 &1935369200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935369194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ff57e31f5de4143a4a25d9b06b0dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 6224252209328302962, guid: cfdf94e255707ca4f85bf1ca45a6b71b, type: 3}
+  grenadeSpawn: {fileID: 1582554401}
+  grenadeVerticalForce: 0
+  grenadeHorizontalForce: 20
+  grenadeCooldown: 1
+  grenadeRotation: 3
 --- !u!1 &1965761717
 GameObject:
   m_ObjectHideFlags: 0
