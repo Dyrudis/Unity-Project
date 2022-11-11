@@ -9,12 +9,6 @@ public class MouseLook : MonoBehaviour
 
     private float xRotation = 0f;
 
-    void Start()
-    {
-        // Locks the cursor to the center of the screen
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     void Update()
     {
         // Get the mouse input

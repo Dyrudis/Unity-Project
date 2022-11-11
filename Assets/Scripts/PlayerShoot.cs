@@ -6,7 +6,10 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private GameObject bulletHole;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private AudioClip shotSound;
-    [SerializeField] private ParticleSystem shotParticles;
+    [SerializeField] private GameObject muzzleFlash;
+    [SerializeField] private GameObject muzzleFlashSpawn;
+
+    public bool canShoot = false;
 
     void Start()
     {
@@ -31,6 +34,8 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
+        if (!canShoot) return;
+
         // Play the shoot sound
         AudioSource.PlayClipAtPoint(shotSound, transform.position);
         
@@ -51,8 +56,12 @@ public class PlayerShoot : MonoBehaviour
         // Play the shoot animation
         gunAnimator.Play("Gun Shot");
 
-        // Play the shoot particles
-        shotParticles.Play();
+        // Play the muzzle flash as child of the muzzle flash spawn
+        GameObject flash = Instantiate(muzzleFlash, muzzleFlashSpawn.transform.position, muzzleFlashSpawn.transform.rotation);
+        flash.transform.parent = muzzleFlashSpawn.transform;
+
+        // Destroy the muzzle flash after 0.5 seconds
+        Destroy(flash, 0.5f);
     }
 
     private void DrawBulletHole(RaycastHit hit)

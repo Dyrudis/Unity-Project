@@ -9,7 +9,10 @@ public class PlayerGrenade : MonoBehaviour
     [SerializeField] private float grenadeVerticalForce = 10f;
     [SerializeField] private float grenadeHorizontalForce = 10f;
     [SerializeField] private float grenadeCooldown = 1f;
+    [SerializeField] private float grenadeDelay = 3f;
     [SerializeField] private float grenadeRotation = 5f;
+    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] private AudioClip grenadeSound;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,25 @@ public class PlayerGrenade : MonoBehaviour
         // Add rotation force
         grenadeRigidbody.AddTorque(transform.right * grenadeRotation, ForceMode.Impulse);
 
-        // Destroy the grenade after 5 seconds
-        Destroy(grenade, 5f);
+        // Call the explosion effect
+        StartCoroutine(ExplosionEffect(grenade));
+    }
+
+    private IEnumerator ExplosionEffect(GameObject grenade)
+    {
+        // Wait for grenadeDelay seconds
+        yield return new WaitForSeconds(grenadeDelay);
+
+        // Play the explosion sound with no volume decrease
+        AudioSource.PlayClipAtPoint(grenadeSound, transform.position, 1f);
+
+        // Instantiate the explosion effect
+        GameObject explosion = Instantiate(explosionEffect, grenade.transform.position, Quaternion.identity);
+
+        // Destroy the grenade
+        Destroy(grenade);
+
+        // Destroy the explosion effect after 3 second
+        Destroy(explosion, 3f);
     }
 }
