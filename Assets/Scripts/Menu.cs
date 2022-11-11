@@ -9,6 +9,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject resetButton;
     [SerializeField] private GameObject resumeButton;
     [SerializeField] private GameObject quitButton;
+    [SerializeField] private GameObject firstPersonPlayer;
+    [SerializeField] private GameObject mainCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -39,12 +41,16 @@ public class Menu : MonoBehaviour
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         menu.enabled = true;
+        firstPersonPlayer.GetComponent<PlayerShoot>().canShoot = false;
+        mainCanvas.GetComponent<Canvas>().enabled = false;
     }
 
     private void closeMenu() {
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         menu.enabled = false;
+        firstPersonPlayer.GetComponent<PlayerShoot>().canShoot = true;
+        mainCanvas.GetComponent<Canvas>().enabled = true;
     }
 
     private void resetGame() {

@@ -13,7 +13,9 @@ public class WeaponSelectionMenu : MonoBehaviour
     [SerializeField] private GameObject weapon2Panel;
     [SerializeField] private GameObject weapon3Panel;
 
+    [SerializeField] private GameObject weaponParent;
     [SerializeField] private GameObject firstPersonPlayer;
+    [SerializeField] private GameObject mainCanvas;
 
     private WeaponScriptableObject selectedWeapon;
 
@@ -37,16 +39,13 @@ public class WeaponSelectionMenu : MonoBehaviour
         openWeaponSelectionMenu();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void openWeaponSelectionMenu()
     {
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         buyMenu.enabled = true;
+        firstPersonPlayer.GetComponent<PlayerShoot>().canShoot = false;
+        mainCanvas.GetComponent<Canvas>().enabled = false;
     }
 
     private void closeWeaponSelectionMenu()
@@ -54,17 +53,33 @@ public class WeaponSelectionMenu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         buyMenu.enabled = false;
+        firstPersonPlayer.GetComponent<PlayerShoot>().canShoot = true;
+        mainCanvas.GetComponent<Canvas>().enabled = true;
     }
 
     public void confirm()
     {
-        // Log the weapon name
-        Debug.Log(selectedWeapon.weaponName);
+        // Spawn the weapon
+        GameObject weapon = Instantiate(selectedWeapon.modelPrefab, weaponParent.transform.position, Quaternion.identity);
+        weapon.transform.parent = weaponParent.transform;
+        weapon.transform.localPosition = Vector3.zero;
+        weapon.transform.localRotation = Quaternion.identity;        
 
-        // Close the buy menu
-        closeWeaponSelectionMenu();
+        // Set the muzzle flash spawn
+        Debug.Log(GameObject.Find("Muzzle Flash Spawn"));
+        firstPersonPlayer.GetComponent<PlayerShoot>().muzzleFlashSpawn = GameObject.Find("Muzzle Flash Spawn");
 
         // Enable shooting
         firstPersonPlayer.GetComponent<PlayerShoot>().canShoot = true;
+
+        // Set the stats
+        firstPersonPlayer.GetComponent<PlayerShoot>().fireRate = selectedWeapon.fireRate;
+        firstPersonPlayer.GetComponent<PlayerShoot>().isAutomatic = selectedWeapon.isAutomatic;
+
+        // Set the audio
+        firstPersonPlayer.GetComponent<PlayerShoot>().shotSound = selectedWeapon.shotSound;
+
+        // Close the buy menu
+        closeWeaponSelectionMenu();
     }
 }

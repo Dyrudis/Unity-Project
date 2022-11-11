@@ -484,7 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2740676655257020496}
   m_Layer: 0
-  m_Name: Spawn
+  m_Name: Muzzle Flash Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,14 +497,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2740676655257020499}
-  m_LocalRotation: {x: 0.71445084, y: -0.026725203, z: -0.6986939, w: -0.025936663}
-  m_LocalPosition: {x: 0.00324478, y: -0.00000694, z: -0.00071024}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.00323385, y: -0.00000694, z: -0.00071024}
   m_LocalScale: {x: 0.00009999998, y: 0.000100000005, z: 0.00009999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4287536073064438919}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -180, y: 180, z: 0}
 --- !u!1 &2759948306937503502
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3083205651550765037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3395865, y: -0.21080244, z: 0.39590776}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1033,7 +1033,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7823332179526665343, guid: 1113c1f27c00354449ce8b93e7125bed, type: 3}
+  - {fileID: 2100000, guid: 5fbcc13342e22d1478578a5d008f5ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1253,7 +1253,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4296295486350893204, guid: 1113c1f27c00354449ce8b93e7125bed, type: 3}
+  - {fileID: 2100000, guid: 5fbcc13342e22d1478578a5d008f5ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

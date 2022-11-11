@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Vandal
   damage: 40
-  fireRate: 1
-  modelPrefab: {fileID: 100000, guid: b1d76b05add46f44292ade654065b4c7, type: 3}
+  fireRate: 0.1026
+  isAutomatic: 1
+  modelPrefab: {fileID: 8629861158327606961, guid: 6335084bfca5a454d8b0cb4d76bc66ff, type: 3}
+  shotSound: {fileID: 8300000, guid: 354c74c6feac28347a69c55fd919638e, type: 3}
   icon: {fileID: 21300000, guid: 420c5be814dba1e4bb0dce502b9d0cd6, type: 3}
