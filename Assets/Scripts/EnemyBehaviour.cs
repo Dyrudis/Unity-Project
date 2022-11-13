@@ -27,6 +27,8 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Always look at the player + 90 degrees
+        transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
+        transform.Rotate(0, 90, 0);
     }
 }
