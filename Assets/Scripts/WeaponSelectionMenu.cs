@@ -66,7 +66,6 @@ public class WeaponSelectionMenu : MonoBehaviour
         weapon.transform.localRotation = Quaternion.identity;        
 
         // Set the muzzle flash spawn
-        Debug.Log(GameObject.Find("Muzzle Flash Spawn"));
         firstPersonPlayer.GetComponent<PlayerShoot>().muzzleFlashSpawn = GameObject.Find("Muzzle Flash Spawn");
 
         // Enable shooting
@@ -75,6 +74,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         // Set the stats
         firstPersonPlayer.GetComponent<PlayerShoot>().fireRate = selectedWeapon.fireRate;
         firstPersonPlayer.GetComponent<PlayerShoot>().isAutomatic = selectedWeapon.isAutomatic;
+        firstPersonPlayer.GetComponent<PlayerShoot>().damage = selectedWeapon.damage;
 
         // Set the audio
         firstPersonPlayer.GetComponent<PlayerShoot>().shotSound = selectedWeapon.shotSound;

@@ -96,5 +96,8 @@ public class PlayerShoot : MonoBehaviour
     {
         // Clone bulletHole
         GameObject clone = Instantiate(bulletHole, hit.point + hit.normal * 0.001f, Quaternion.FromToRotation(Vector3.back, hit.normal));
+
+        // Destroy the bullet hole after 5 seconds
+        Destroy(clone, 5f);
     }
 }

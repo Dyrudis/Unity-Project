@@ -48,8 +48,6 @@ public class PlayerGrenade : MonoBehaviour
         direction.Normalize();
         grenadeRigidbody.AddForce(direction * grenadeHorizontalForce + grenadeSpawn.transform.up * grenadeVerticalForce, ForceMode.Impulse);
 
-        Debug.Log(grenadeSpawn.transform.up);
-
         // Add rotation force
         grenadeRigidbody.AddTorque(transform.right * grenadeRotation, ForceMode.Impulse);
 
