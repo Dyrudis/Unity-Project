@@ -13,4 +13,13 @@ public class UI : MonoBehaviour
         // Update the timer as "MM:SS"
         timer.GetComponent<TextMeshProUGUI>().text = string.Format("{0:00}:{1:00}", Mathf.Floor(Time.timeSinceLevelLoad / 60), Mathf.Floor(Time.timeSinceLevelLoad % 60));
     }
+
+    public void FinishGame()
+    {
+        // Stop the timer
+        Time.timeScale = 0;
+
+        // Change the color of the timer
+        timer.GetComponent<TextMeshProUGUI>().color = Color.green;
+    }
 }

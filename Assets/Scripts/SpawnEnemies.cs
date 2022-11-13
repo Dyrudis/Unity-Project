@@ -8,6 +8,8 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] private int numberOfEnemies = 5;
     [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
     [SerializeField] private GameObject wall;
+    [SerializeField] private bool isEnd = false;
+    [SerializeField] private Canvas mainCanvas;
 
     private List<GameObject> enemies = new List<GameObject>();
 
@@ -45,8 +47,15 @@ public class SpawnEnemies : MonoBehaviour
         // Check if all enemies are dead
         if (enemies.Count == 0)
         {
-            // Destroy the wall
-            Destroy(wall);
+            if (isEnd)
+            {
+                mainCanvas.GetComponent<UI>().FinishGame();
+            }
+            else
+            {
+                // Destroy the wall
+                Destroy(wall);
+            }
         }
     }
 }
