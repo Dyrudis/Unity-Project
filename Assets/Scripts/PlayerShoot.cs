@@ -78,7 +78,7 @@ public class PlayerShoot : MonoBehaviour
         projectileRigidbody.useGravity = false;
 
         // Add force to the projectile
-        projectileRigidbody.AddForce((ray.GetPoint(50) - muzzleFlashSpawn.transform.position) * 200);
+        projectileRigidbody.AddForce((ray.GetPoint(30) - muzzleFlashSpawn.transform.position) * 300);
         Destroy(projectileObject, 0.2f);
     }
 
