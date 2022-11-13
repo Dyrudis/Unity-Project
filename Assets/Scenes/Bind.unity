@@ -9124,6 +9124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580841785}
+  - component: {fileID: 1580841786}
   m_Layer: 0
   m_Name: Checkpoint 3
   m_TagString: Untagged
@@ -9157,6 +9158,32 @@ Transform:
   m_Father: {fileID: 1864903304}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580841786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580841784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ebc2b5b9822d4498d1118e2d23a836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4502264367799760822, guid: f00ff4740adfd734fa08eb44d26bba2a, type: 3}
+  numberOfEnemies: 10
+  spawnPoints:
+  - {fileID: 1209892856}
+  - {fileID: 647012730}
+  - {fileID: 536288280}
+  - {fileID: 83075783}
+  - {fileID: 241959414}
+  - {fileID: 1993990385}
+  - {fileID: 496030191}
+  - {fileID: 1903128410}
+  - {fileID: 173949565}
+  - {fileID: 1956896813}
+  wall: {fileID: 1304931135}
 --- !u!1 &1589663149
 GameObject:
   m_ObjectHideFlags: 0
@@ -11155,6 +11182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1965397938}
+  - component: {fileID: 1965397939}
   m_Layer: 0
   m_Name: Checkpoint 4
   m_TagString: Untagged
@@ -11188,6 +11216,32 @@ Transform:
   m_Father: {fileID: 1864903304}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965397939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965397937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ebc2b5b9822d4498d1118e2d23a836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4502264367799760822, guid: f00ff4740adfd734fa08eb44d26bba2a, type: 3}
+  numberOfEnemies: 10
+  spawnPoints:
+  - {fileID: 907408976}
+  - {fileID: 745453121}
+  - {fileID: 1601265556}
+  - {fileID: 2126445325}
+  - {fileID: 1203095326}
+  - {fileID: 552235231}
+  - {fileID: 1379932252}
+  - {fileID: 289738466}
+  - {fileID: 1981948758}
+  - {fileID: 717947512}
+  wall: {fileID: 625730861}
 --- !u!1 &1981948757
 GameObject:
   m_ObjectHideFlags: 0
