@@ -12,12 +12,15 @@ public class EnemyBehaviour : MonoBehaviour
         if (life <= 0)
         {
             Destroy(gameObject);
+
+            // Get the spawn enemies script from the parent
+            transform.parent.GetComponent<SpawnEnemies>().RemoveEnemy(gameObject);
         }
     }
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         
     }
 

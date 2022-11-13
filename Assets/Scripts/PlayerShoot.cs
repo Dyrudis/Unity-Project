@@ -10,6 +10,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private GameObject projectile;
 
     public float fireRate = 0.5f;
+    public float damage = 40f;
     public bool isAutomatic = false;
     public bool canShoot = false;
     public AudioClip shotSound;
@@ -54,8 +55,17 @@ public class PlayerShoot : MonoBehaviour
         // Check if the raycast hits something
         if (Physics.Raycast(ray, out hit))
         {
-            // Draw an bullet hole texture on the hit object
-            DrawBulletHole(hit);
+            // Check if the raycast hit an enemy
+            if (hit.transform.tag == "Enemy")
+            {
+                // Deal damage to the enemy
+                hit.transform.GetComponent<EnemyBehaviour>().TakeDamage(damage);
+            }
+            else
+            {
+                // Draw an bullet hole texture on the hit object
+                DrawBulletHole(hit);
+            }
         }
 
         // Play the muzzle flash as child of the muzzle flash spawn

@@ -22,6 +22,7 @@ public class SpawnEnemies : MonoBehaviour
 
             // Spawn the enemy
             GameObject spawnedEnemy = Instantiate(enemy, spawnPoints[randomSpawnPoint].position, Quaternion.identity);
+            spawnedEnemy.transform.parent = transform;
             enemies.Add(spawnedEnemy);
 
             // TP the enemy to the ground with a raycast
@@ -37,9 +38,10 @@ public class SpawnEnemies : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEnemy(GameObject enemy)
     {
+        enemies.Remove(enemy);
+
         // Check if all enemies are dead
         if (enemies.Count == 0)
         {
