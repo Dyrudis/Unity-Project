@@ -67,7 +67,7 @@ public class PlayerGrenade : MonoBehaviour
         GameObject explosion = Instantiate(explosionEffect, grenade.transform.position, Quaternion.identity);
 
         // Check if the grenade hit an enemy
-        Collider[] colliders = Physics.OverlapSphere(grenade.transform.position, 7f);
+        Collider[] colliders = Physics.OverlapSphere(grenade.transform.position, 5f);
         foreach (Collider collider in colliders)
         {
             if (collider.tag == "Enemy")

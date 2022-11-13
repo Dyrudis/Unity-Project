@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6713508892867064264}
   - component: {fileID: 1974097356316462619}
   - component: {fileID: 8625420590352857068}
-  - component: {fileID: 8029052779025682884}
+  - component: {fileID: 1478446662931878206}
   m_Layer: 0
   m_Name: Raze Grenade
   m_TagString: Untagged
@@ -157,7 +157,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c56de7a48fd60004ca235c182883165e, type: 2}
+  - {fileID: 2100000, guid: 0064c46bea018d94b99ad4c74c6e026b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,20 +244,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!136 &8029052779025682884
-CapsuleCollider:
+--- !u!135 &1478446662931878206
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6224252209328302962}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 607355af80ea9a94eb97b4c9cb0bf517, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.07, y: 0, z: 0}
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!1 &7500954227245717539
 GameObject:
   m_ObjectHideFlags: 0

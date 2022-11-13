@@ -274,7 +274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8fb78b35d9962464b8f8b6cad002e83f, type: 2}
+  - {fileID: 2100000, guid: d725ef4e5da7d734486a9f24c104cfc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9362,7 +9362,7 @@ MonoBehaviour:
   grenadePrefab: {fileID: 6224252209328302962, guid: cfdf94e255707ca4f85bf1ca45a6b71b, type: 3}
   grenadeSpawn: {fileID: 886222343}
   grenadeVerticalForce: 0
-  grenadeHorizontalForce: 20
+  grenadeHorizontalForce: 23
   grenadeCooldown: 1
   grenadeDelay: 1.5
   grenadeRotation: 3
@@ -12909,7 +12909,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 547c5382f4f58554c9e11e6759ec6ce4, type: 2}
+  sharedProfile: {fileID: 11400000, guid: c36603da358ca574d9a4b0a320a18156, type: 2}
 --- !u!114 &2009774986
 MonoBehaviour:
   m_ObjectHideFlags: 0

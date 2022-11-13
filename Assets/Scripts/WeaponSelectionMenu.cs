@@ -46,6 +46,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         buyMenu.enabled = true;
         firstPersonPlayer.GetComponent<PlayerShoot>().canShoot = false;
         mainCanvas.GetComponent<Canvas>().enabled = false;
+        selectedWeapon = weapon1;
     }
 
     private void closeWeaponSelectionMenu()
