@@ -6,6 +6,7 @@ using TMPro;
 public class UI : MonoBehaviour
 {
     [SerializeField] private GameObject timer;
+    private int enemyCount = 25;
 
     private bool isFinished = false;
 
@@ -28,5 +29,14 @@ public class UI : MonoBehaviour
         timer.GetComponent<TextMeshProUGUI>().text = "FINISHED !\nYour time : " + string.Format("{0:00}:{1:00}", Mathf.Floor(Time.timeSinceLevelLoad / 60), Mathf.Floor(Time.timeSinceLevelLoad % 60));
 
         isFinished = true;
+    }
+
+    public void reduceEnemyCount()
+    {
+        enemyCount--;
+        if (enemyCount == 0)
+        {
+            FinishGame();
+        }
     }
 }

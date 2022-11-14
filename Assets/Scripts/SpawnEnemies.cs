@@ -39,7 +39,7 @@ public class SpawnEnemies : MonoBehaviour
             spawnPoints.RemoveAt(randomSpawnPoint);
         }
     }
-
+    
     public void RemoveEnemy(GameObject enemy)
     {
         enemies.Remove(enemy);
@@ -47,15 +47,7 @@ public class SpawnEnemies : MonoBehaviour
         // Check if all enemies are dead
         if (enemies.Count == 0)
         {
-            if (isEnd)
-            {
-                mainCanvas.GetComponent<UI>().FinishGame();
-            }
-            else
-            {
-                // Destroy the wall
-                Destroy(wall);
-            }
+            Destroy(wall);
         }
     }
 }

@@ -13,8 +13,12 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
 
+
             // Get the spawn enemies script from the parent
             transform.parent.GetComponent<SpawnEnemies>().RemoveEnemy(gameObject);
+
+            // Get the UI script from the main canvas
+            GameObject.Find("Main Canvas").GetComponent<UI>().reduceEnemyCount();
         }
     }
 
