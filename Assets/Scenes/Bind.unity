@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3729,7 +3729,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Le but du jeu est simple :\n\xC9liminer les 5 cibles de chaque zone pour
-    passer \xE0 la suivante le plus vite possible.\n\n[E] Jeter une grenade\n[R]
+    passer \xE0 la suivante le plus vite possible.\n\n[RMB] Jeter une grenade\n[R]
     Recommencer\n[Esc] Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12959,7 +12959,7 @@ MonoBehaviour:
   sensitivity: 0.6
   playerBody: {fileID: 1403138514}
   weaponParent: {fileID: 886222343}
-  weaponMovement: 10
+  weaponMovement: 3
   xRotation: 0
 --- !u!20 &2009774988
 Camera:

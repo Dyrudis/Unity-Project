@@ -26,7 +26,7 @@ public class PlayerGrenade : MonoBehaviour
         while (true)
         {
             // Wait for the input
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
+            yield return new WaitUntil(() => Input.GetButtonDown("Fire2"));
 
             // Throw the grenade
             ThrowGrenade();

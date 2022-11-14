@@ -32,7 +32,7 @@ public class MouseLook : MonoBehaviour
         // Smoothly rotate the weapon along the mouseX input
         // Only execute in Build
         Quaternion desiredRotation = Quaternion.Euler(mouseX * weaponMovement * .5f, 90 - mouseX * weaponMovement, mouseY * weaponMovement);
-        weaponParent.transform.localRotation = Quaternion.Lerp(weaponParent.transform.localRotation, desiredRotation, .03f);
+        weaponParent.transform.localRotation = Quaternion.Lerp(weaponParent.transform.localRotation, desiredRotation, 5f * Time.deltaTime);
     }
 
     private void OnDrawGizmos()
